@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Datenbank-Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}"> 
+</head>
+<body>
+	<h1>Test</h1>
+    <table class = "table">
+        <tr>
+            <th>Marke</th>
+            <th>Modell</th>
+            <th>Preis</th>
+            <th>Reichweite nach WLTP-Standard</th>
+            <th>Leistung in PS</th>
+            <th>Carcard</th>
+        </tr>
+        {% for result in results %}
+            <tr>
+                <td>{{ result[0] }}</td>
+                <td>{{ result[1] }}</td>
+                <td>{{ result[2] }}</td>
+                <td>{{ result[7] }}</td>
+                <td>{{ result[11] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

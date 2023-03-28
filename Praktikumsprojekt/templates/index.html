@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Datenbank-Filter</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+	<h1>Datenbank-Filter</h1>
+	<form method="post" action="/filter">
+		<label for="marke">Marke:</label>
+		<select id="marke" name="marke">
+			<option value="">--Bitte auswählen--</option>
+			<option value="VW">VW</option>
+			<option value="Audi">Audi</option>
+			<option value="Porsche">Porsche</option>
+			<option value="CUPRA">CUPRA</option>
+			<option value="Skoda">Skoda</option>
+			<option value="">Keine Präferenz</option>
+		</select><br><br>
+
+		<label for="preis">Preis:</label>
+		<select id="preis" name="preis">
+			<option value="">--Bitte auswählen--</option>
+			<option value="lowPreis">unter 50.000€</option>
+			<option value="medPreis">unter 100.000€</option>
+			<option value="highPreis">unbegrenzt</option>
+			<option value="">Keine Präferenz</option>
+		</select><br><br>
+
+		<label for="leistung">Leistung:</label>
+		<select id="leistung" name="leistung">
+			<option value="">--Bitte auswählen--</option>
+			<option value="lowLeistung">ab 150 PS</option>
+			<option value="medLeistung">ab 250 PS</option>
+			<option value="highLeistung">ab 450 PS</option>
+			<option value="">Keine Präferenz</option>
+		</select><br><br>
+		
+		<label for="reichweite">Reichweite nach WLTP-Standard:</label>
+		<select id="reichweite" name="reichweite">
+			<option value="">--Bitte auswählen--</option>
+			<option value="lowReichweite">ab 400 km</option>
+			<option value="highReichweite">ab 500 km</option>
+			<option value="">Keine Präferenz</option>
+		</select><br><br>
+		<input type="submit" value="Filtern">
+	</form>
+</body>
+</html>
